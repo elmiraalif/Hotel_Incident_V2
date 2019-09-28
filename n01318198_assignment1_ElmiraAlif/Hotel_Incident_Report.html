@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hotel Incident Report</title>
+    </head>
+    <body>
+        <h1>Hotel Incident Report</h1>
+        <p>Please complete this Incident report very carefully.</p>
+        <form method="POST" action="https://postman-echo.com/post">
+            <!--General Information-->
+            <section>
+                <h2>General Information</h2>
+                <label for="hotel_name">Name of Hotel:</label>
+                <input type="text" id="hotel_name" name="hotel_name" />
+
+                <label for="hotel_owner">Hotel Owner:</label>
+                <input type="text" id="hotel_owner" name="hotel_owner" />
+
+                <label for="hotel_email">Email:</label>
+                <input type="email" id="hotel_email" name="hotel_email" />
+
+                <label for="hotel_phone">Phone Number:</label>
+                <input type="tel" id="hotel_phone" name="hotel_phone" />
+            </section>
+            <!--Incident Report Information-->
+            <section>
+                <h2>Incident Report Information</h2>
+                <label for="incident_date">Date of Incident:</label>
+                <input type="date" id="incident_date" name="incident_date" />
+
+                <label for="incident_time">Time of Incident:</label>
+                <input type="time" id="incident_time" name="incident_time" />
+
+                <label for="incident_location">Location of Incident:</label>
+                <input type="text" id="incident_location" name="incident_location" />
+            </section>
+            <!--Incident Details-->
+            <section>
+                <h2>Incident Details</h2>
+                <section>
+                    <h3>Please Select the reason for incident:</h3>
+                    <div>
+                        <input type="radio" id="detail_injury" name="incident_detail" value="injury" />
+                        <label for="detail_injury">Injury/medical conditions</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="detail_accident" name="incident_detail" value="accident" />
+                        <label for="detail_accident">Accident</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="detail_lost" name="incident_detail" value="lost" />
+                        <label for="detail_lost">Lost Person</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="detail_emergency" name="incident_detail" value="emergency" />
+                        <label for="detail_emergency">Emergency eg. Fire</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="detail_other" name="incident_detail" value="other" />
+                        <label for="detail_other">Other</label>
+                    </div>
+                </section>
+
+
+                <!--Descreption of the Incident -->
+                <section>
+                    <h3>Describe how the incident occured.</h3>
+                    <div>
+                        <textarea id="incident_description" name="incident_description" rows="10" cols="70"></textarea>
+                    </div>
+                </section>
+                <!--Anything involved in Accident-->
+                <section>
+                    <h3>Any staff, vehicle, equipment involved in accident?</h3>
+                    <select id="incident_involved" name="incident_involved">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="not_know">I do not know</option>
+                    </select>
+                    <h3>If Yes:</h3>
+                    <div>
+                        <input type="checkbox" id="staff_involved" name="staff_involved" />
+                        <label for="staff_involved">Staff</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="equipment_involved" name="equipment_involved" />
+                        <label for="equipment_involved">Equipment</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="vehicle_involved" name="vehicle_involved" />
+                        <label for="vehicle_involved">Vehicle</label>
+                    </div>
+                </section>
+                <!--Graphical prove or Pictures of Incident-->
+                <section>
+                    <h3>Do you have any graphical prove or pictures taken?</h3>
+                    <div>
+                        <input type="radio" id="picture_yes" name="incident_picture" value="yes" />
+                        <label for="picture_yes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="picture_no" name="incident_picture" value="no" />
+                        <label for="picture_no">No</label>
+                    </div>
+                </section>
+                <!--Legal Actions-->
+                <section>
+                    <h3>Legal action taken? if any</h3>
+                    <div>
+                        <input type="checkbox" id="verbal_action" name="verbal_action" checked />
+                        <label for="verbal_action">Verbal Warning</label>
+                    </div>
+                    <div>
+
+                        <input type="checkbox" id="written_action" name="written_action" />
+                        <label for="written_action">Written Warning</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="suspension_action" name="suspension_action" />
+                        <label for="suspension_action">Suspension</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="other_action" name="other_action" />
+                        <label for="other_action">Other</label>
+                    </div>
+                </section>
+            </section>
+            <input type="submit" value="Send" />
+        </form>
+    </body>
+</html>
